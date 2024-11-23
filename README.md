@@ -10,10 +10,10 @@ A **comprehensive collection** of all algorithms covered in the **SEM-3 DSA (GTU
 
 ## 📖 Quick Links to Chapters  
 
-1. [Chapter 1 - Basic Concepts of DSA](#chapter-1---basic-concepts-of-dsa)  
+1. [Chapter 1 - Basic Concepts of DSA](#chapter-1---basic-concept-of-dsa)  
 2. [Chapter 2 - String Operations](#chapter-2---string-operations)  
 3. [Chapter 3 - Stack and Queue](#chapter-3---stack-and-queue)  
-4. [Chapter 4 - Linked List](#chapter-4---linked-list)  
+4. [Chapter 4 - Linked List](#chapter-4---link-list)  
 5. [Chapter 5 - Tree](#chapter-5---tree)  
 
 ---
@@ -148,7 +148,9 @@ Algorithm Delete ( A, A_Size, B, B_Size ) {
     step 10 : i <- i + 1
     step 11 : exit 
 
-}## Chapter 2 - String Operations
+}
+
+## Chapter 2 - String Operations
 
 String manipulation algorithms.
 
@@ -340,7 +342,9 @@ Algorithm Delete ( Text, Pos, length ) {
     step 4 : newstr[j] = NULL
     step 5 exit  
 
-}## Chapter 3 - Stack and Queue
+}
+
+## Chapter 3 - Stack and Queue
 
 #### Operations of Stack
 
@@ -424,7 +428,9 @@ Algorithm Qelete ( Queue, Rear, Front ) {
     step 4 : return y
     step 5 : exit
 
-}## Chapter 4 - Link List
+}
+
+## Chapter 4 - Link List
 
 #### Link List Operations
 1. [Insert New Node at the Begining of Link List.](#1-insert-new-node-at-the-begining-of-link-list)
@@ -685,6 +691,7 @@ Algorithm search( first , target )
     Step 5 : write "target not found"
     Step 6 : exit
 }
+
 ## Chapter 5 - Tree
 
 #### Tree Traversal Algorithms
