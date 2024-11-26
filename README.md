@@ -10,12 +10,13 @@ A **comprehensive collection** of all algorithms covered in the **SEM-3 DSA (GTU
 
 ## 📖 Quick Links to Chapters  
 
-1. [Chapter 1 - Basic Concepts of DSA](#chapter-1---basic-concept-of-dsa)  
+1. [Chapter 1 - Basic Concepts of DSA](#chapter-1---basic-concept-of-dsa)
 2. [Chapter 2 - String Operations](#chapter-2---string-operations)  
 3. [Chapter 3 - Stack and Queue](#chapter-3---stack-and-queue)  
 4. [Chapter 4 - Linked List](#chapter-4---link-list)  
-5. [Chapter 5 - Tree](#chapter-5---tree)  
-
+5. [Chapter 5 - Tree](#chapter-5---tree)
+6. [Chapter 6 - Sorting And Hashing](#chapter-6---sorting-and-hashing)  
+  
 ---
 
 ### 💡 How to Use  
@@ -750,3 +751,256 @@ Algorithm postorder( tree ){
                         call inorder(tree->rptr)
     step 4 :- write tree->data
 }
+
+## Chapter 6 - Sorting And Hashing
+
+#### Sorting Algorithms
+
+1. [Bubble Sort (Exchange sort or Sinking sort)]
+2. [Selection Sort]
+3. [Insertion Sort]
+4. [Quick Sort]
+5. [Merge Sort]
+6. [Radix Sort]
+
+
+#### K is Vector of Elements
+#### N is Total Number of Elements in Vector 
+---
+#### (1) Bubble Sort (Exchange sort or Sinking sort)
+
+    Algorithm BubbleSort( K , N ) {
+
+        step 1 : [ Initialize ]
+                    last <- N
+        step 2 : [ loop on pass index ]
+                    Repeat thru step 5 for pass = 1,2,...,N-1
+        step 3 : [ Initialize exchanges counter for this pass ]
+                    exchange <- 0
+        step 4 : [ Perform pair wise comparisons on unsorted elements ]
+                    Repeat for i = 1,2,...,last-1
+                        if(K[i] > K[i+1]) {
+                            swap( K[i] , K[i+1] )
+                        }
+                        exchange <- exchange + 1
+        step 5 : [Were any exchanges made on this pass ? ]
+                    if(exchange == 0){
+                        return
+                    }
+                    else{
+                        last <- last - 1
+                    }
+        step 6 : exit
+
+    }
+
+- Explaination of Bubble Sort
+
+    - Bubble sort is a very simple method that sorts the array elements by repeatedly moving the largest element to the highest index position of the array segment (in case of arranging elements in ascending order).
+
+    - In bubble sorting, consecutive adjacent pairs of elements in the array are compared with each other.
+
+    - If the element at the lower index is greater than the element at the higher index, the two elements are interchanged so that the element is placed before the bigger one.
+
+    - This process will continue till the list of unsorted elements exhausts.
+
+    - This procedure of sorting is called bubble sorting becauseelements ‘bubble’ to the top of the list. Note that at the end of the first pass, the largest element in the list will be placed at its proper position
+
+- Time Compaxity
+
+    - Best Case : O(n)
+    - Avarage Case : O(n²)
+    - Worst Case : O(n²)
+
+#### (2) Selection Sort
+
+    Algorithm SelectionSort( K , N ) {
+
+        step 1 : [ loop on pass index]
+                    Repeat thru step 4 for pass = 1,2,...,N-1
+        step 2 : [ Initialize minimum index]
+                    MIN_INDEX <- PASS
+        step 3 : [Make a pass and obtain element with smallest value]
+                    Repeat for I = PASS + 1 , PASS + 2,..., N
+                        if(K[i] < K[MIN_INDEX]) {
+                            MIN_INDEX <- I
+                        } 
+        step 4 : [Exchange elements]
+                    if(MIN_INDEX != PASS) {
+                        swap( K[PASS] , K[MIN_INDEX] )
+                    }
+        swap 5 : [Finish]
+                    exit
+
+    }
+
+- Explaination of Selection Sort
+
+    - In first pass, First find the smallest value in the array and swap with the first element. Then, in second pass find the second smallest value in the array and swap with the second element. Repeat this procedure until the entire array is sorted
+
+- Time Compaxity
+
+    - Best Case : O(n²)
+    - Avarage Case : O(n²)
+    - Worst Case : O(n²)
+
+#### (3) Insertion Sort
+
+    Algorithm InsertionSort( K , N ){
+        step 1 : [ loop on index]
+                    Repeat thru step 4 for I = 2,...,N-1
+        step 2 : [ Initialize variable]
+                    Key <- K[I]
+                    J <- I - 1
+        step 3 : [ Perform comparisons ]
+                    Repeat while J >= 1 && Key < K[J]
+                        K[J+1] <- K[J]
+                        J <- J – 1
+        step 4 : [ Place value in proper position ]
+                    K[J+1] <- Key
+        step 5 : exit
+
+    }
+
+- Explaination of Insertion Sort
+
+    - Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands.
+
+    - The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+
+    - This algorithm sorts an array of items by repeatedly taking an element from the unsorted portion of the array and inserting it into its correct position in the sorted portion of the array.
+
+    - The sorting algorithm will proceed until there are elements in the unsorted set.
+
+- Time Compaxity
+
+    - Best Case : O(n)
+    - Avarage Case : O(n²)
+    - Worst Case : O(n²)
+
+#### (4) Quick Sort
+---
+    Algorithm QuickSort( A , Low , High ){
+
+        if ( low < high) {
+            pivot= PARTITION(A, low, high);
+            QuickSort(A, low, pivot-1);
+            QuickSort(A, pivot+1,high);
+        }
+    }
+---
+    Algorithm PARTITION ( A, Low, High ) {
+
+    pivot <- A[Low]
+    Left <- Low
+    Right <- High
+    while (Left < Right) {
+
+        /* Move left while item < pivot */
+        while( A[left] <= pivot && left < right ) left++;
+
+        /* Move right while item > pivot */
+        while( A[right] > pivot ) right--;
+        if ( left < right )
+        SWAP(A[left],A[right]);
+
+    }
+    
+    /* right is final position for the pivot */
+    SWAP(A[right], A[low]);
+    return right;
+
+    }
+
+- Time Compaxity
+
+    - Best Case : Θ(nlog(n))
+    - Avarage Case : Θ(nlog(n))
+    - Worst Case : Θ(n²)
+
+#### (5) Merge Sort
+---
+
+    Algorithm MergeSort( A , P, R ){
+        if(P < R){
+            q <- ( P+R ) / 2
+            MergeSort(A, P, Q)
+            MergeSort(A, Q + 1, R)
+            MERGE(A, P, Q, R)
+        }
+    }
+
+---
+
+    Algorithm MERGE(A, P, Q, R){
+
+        [Initialize]
+        i = P , j = Q + 1, k = 1
+
+        while(i <= Q) and (j <= R) {
+            if(A[i] <= A[j]){
+                B[k] = A[i]
+                i = i + 1, k = k + 1
+            }
+            else {
+                B[ k ] =A[ j ]
+                j = j + 1, k= k + 1
+            }
+        }
+        //here one of the subarray is in B
+        if(i < Q) {
+            for index = j to R {
+                B[ k ] = A[ index ]
+                k = k + 1
+            }
+        }
+        else{
+            for index = i to Q {
+                B[ k ] = A[ index]
+                k = k +1
+            }
+        }
+        x = 1;
+        for index = P to R {
+            A[index] = B[x++]
+        }
+        return
+
+    }
+
+- Time Compaxity
+
+    - Best Case : Θ(nlog(n))
+    - Avarage Case : Θ(nlog(n))
+    - Worst Case : Θ(nlog(n))
+
+#### (6) Radix Sort
+
+    Algorithm RadixSort{
+
+        step 1 : Repeat thrugh step 6 for each digit in the key.
+        step 2 : Initialize the pockes
+        step 3 : Repeat thru step 5 until the end of the linked list.
+        step 4 : Obtain the next digit of the key
+        step 5 : Insert the record in the appropriate pocket
+        step 6 : Combine the pockets to form a new linked list.
+
+    }
+
+- Explaination of Radix Sort
+
+    - Radix sort is a linear sorting algorithm for integers and uses the concept of sorting names in alphabetical order.
+
+    - When we have a list of sorted names, the radix is 26 (or 26 buckets) because there are 26 letters in the English alphabet. So radix sort is also known as bucket sort.
+
+    - When radix sort is used on integers, sorting is done on each of the digits in the number.
+
+    - The sorting procedure proceeds by sorting the least significant to the most significant digit.
+
+    - While sorting the numbers, we have ten buckets, each for one digit (0, 1, 2, …, 9) and the number of passes will depend on the length of the number having maximum number of digts.
+
+- Time Compaxity
+
+    - Best Case : O(n.d)
+    - Avarage Case : O(n.d)
+    - Worst Case : O(n.d)
