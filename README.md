@@ -756,12 +756,12 @@ Algorithm postorder( tree ){
 
 #### Sorting Algorithms
 
-1. [Bubble Sort (Exchange sort or Sinking sort)]
-2. [Selection Sort]
-3. [Insertion Sort]
-4. [Quick Sort]
-5. [Merge Sort]
-6. [Radix Sort]
+1. [Bubble Sort (Exchange sort or Sinking sort)](#1-bubble-sort-exchange-sort-or-sinking-sort)
+2. [Selection Sort](#2-selection-sort)
+3. [Insertion Sort](#3-insertion-sort)
+4. [Quick Sort](#4-quick-sort)
+5. [Merge Sort](#5-merge-sort)
+6. [Radix Sort](#6-radix-sort)
 
 
 #### K is Vector of Elements
