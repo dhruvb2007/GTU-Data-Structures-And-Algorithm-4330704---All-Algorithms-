@@ -41,8 +41,8 @@ Feel free to reach out or contribute to make this repository even better! 😊
 
 1. [Traverse Array](#1-traverse-array---visit-each-element-of-array)
 2. [Search element](#2-search-element---there-is-two-type-linear-search-and-binary-search)
-   - [(a) Linear Search](#(a)-linear-search)
-   - [(b) Binary Search](#(b)-binary-search)
+   - [(a) Linear Search](#a-linear-search)
+   - [(b) Binary Search](#b-binary-search)
 3. [Array Insert](#3-array-insert)
 4. [Array Delete](#4-array-delete) 
 5. [Array Mearge](#5-array-mearge)
