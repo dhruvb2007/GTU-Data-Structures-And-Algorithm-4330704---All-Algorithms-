@@ -41,14 +41,17 @@ Feel free to reach out or contribute to make this repository even better! 😊
 
 1. [Traverse Array](#1-traverse-array---visit-each-element-of-array)
 2. [Search element](#2-search-element---there-is-two-type-linear-search-and-binary-search)
+   - [(a) Linear Search](#(a)-linear-search)
+   - [(b) Binary Search](#(b)-binary-search)
 3. [Array Insert](#3-array-insert)
-4. [Array Mearge](#4-array-mearge)
+4. [Array Delete](#4-array-delete) 
+5. [Array Mearge](#5-array-mearge)
 
 #### (1) Traverse Array - visit each element of Array
 Algorithm Traverse ( Array , size ) {
 
     step 1 : [ initialize ]
-                    i <- 0w
+                    i <- 0;
     step 2 : Repeat Steps 3 , 4 while
                     i < size
     step 3 : print Array[i]
@@ -113,7 +116,7 @@ Algorithm Insert ( Array, N, Position, Value ) {
 
 }
 
-#### (3) Array Insert 
+#### (4) Array Delete
 
 Algorithm Delete ( Array, N, Position ) {
 
@@ -129,9 +132,9 @@ Algorithm Delete ( Array, N, Position ) {
     
 }
 
-#### (4) Array Mearge 
+#### (5) Array Mearge 
 
-Algorithm Delete ( A, A_Size, B, B_Size ) {
+Algorithm Mearge ( A, A_Size, B, B_Size ) {
 
     step 1 : [initialize]
                 i <- 0 , Index <- 0
